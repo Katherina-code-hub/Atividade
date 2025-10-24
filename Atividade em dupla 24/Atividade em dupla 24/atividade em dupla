@@ -1,0 +1,27 @@
+Nome: Katharina Sertório e Gabriel Cardoso 2C
+
+Código:
+ matriz = []
+
+for i in range(0,3):
+    linha = [] 
+    for j in range(0,3):
+        valor = int(input(f"Digite um valor para [{i}, {j}]: "))
+        linha.append(valor)
+    matriz.append(linha)  
+
+print("Matriz:")
+for linha in matriz:
+    print(linha)
+
+soma_pares = 0
+for linha in matriz:
+    for valor in linha:
+        if valor % 2 == 0:
+            soma_pares += valor
+soma_terceira_coluna = sum(linha[2] for linha in matriz)
+maior_segunda_linha = max(matriz[1])
+
+print(f"Soma dos valores pares: {soma_pares}")
+print(f"Soma dos valores da terceira coluna: {soma_terceira_coluna}")
+print(f"Maior valor da segunda linha: {maior_segunda_linha}")
